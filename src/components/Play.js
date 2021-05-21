@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {Icon} from "semantic-ui-react";
+import {Wrap, Scissors, Paper, Rock} from "../styles/SharedStyles";
 
 const Play = ({ setMyChoice }) => {
   const setChoice = (e) => {
@@ -8,32 +9,35 @@ const Play = ({ setMyChoice }) => {
   };
 
   return (
-    <div className="play">
+    <Wrap  className="play">
+      <Paper>  
         <Link to="/game">
-          <div
-            data-id="paper"
+          <Icon 
+            size='massive'
+            name='hand paper outline' 
             onClick={setChoice}
-            
-          >Paper</div>
+            data-id='paper' />
         </Link>
-        
+      </Paper>
+      <Scissors>
         <Link to="/game">
-        <Icon name='hand scissors'>
-          <div
-            data-id="scissors"
+          <Icon 
+            size='massive'
+            name='hand scissors outline'
             onClick={setChoice}
-          >Scissors</div>
-        </Icon>
+            data-id='scissors' />
         </Link>
+      </Scissors>
+      <Rock>
         <Link to="/game">
-          <div
-            data-id="rock"
+          <Icon 
+            size='massive'
+            name='hand rock outline'
             onClick={setChoice}
-            className="icon icon--rock"
-          >Rock</div>
+            data-id='rock' />
         </Link>
-      
-    </div>
+      </Rock> 
+    </Wrap>
   );
 };
 

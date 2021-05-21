@@ -1,10 +1,11 @@
 import React from "react";
+import {Head, ScoreWrap} from '../styles/SharedStyles';
 
 const Header = ({ score }) => {
   return (
-    <div className="header">
-      <h1>Score: {score}</h1>
-    </div>
+    <Head className="header">
+      <ScoreWrap>Score: {score}</ScoreWrap>
+    </Head>
   );
 };
 

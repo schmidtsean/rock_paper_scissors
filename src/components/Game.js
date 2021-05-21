@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { Icon } from "semantic-ui-react";
+import {Wrap} from '../styles/SharedStyles';
+import Rock from '../images/Rock.png';
+import Scissors from '../images/Scissors.png';
 const Game = ({ score, myChoice, setScore }) => {
   
   const [house, setHouse] = useState("");
@@ -17,7 +20,7 @@ const Game = ({ score, myChoice, setScore }) => {
   }, []);
 
   const Result = () => {
-    if (myChoice === "rock" && house === "scissors") {
+    if (myChoice === <img src={Rock} data-id="rock" /> && house === <img src={Scissors} data-id="scissors" />) {
       setPlayerWin("win");
       setScore(score + 1);
     } else if (myChoice === "rock" && house === "paper") {
@@ -45,19 +48,21 @@ const Game = ({ score, myChoice, setScore }) => {
   }, [house]);
 
   return (
-    <div className="game">
-      my choice:{myChoice} <br />
-      House choice:{house} <br />
+    <Wrap className="game">
+      <h2>My Choice: {myChoice} </h2>
+      <br />
+      <h2>House choice: {house} </h2>
+      <br />
     
-      Result:
+      <h2>Result: </h2>
       {playerWin == "win" && <h2>You Win</h2>}
       {playerWin == "lose" && <h2>You lose</h2>}
       {playerWin == "draw" && <h2>Draw</h2>}
     
       <Link to="/" onClick={() => setHouse()}>
-        Play Again
+        <h2>Play Again </h2>
       </Link>
-    </div>
+    </Wrap>
   );
 };
 
