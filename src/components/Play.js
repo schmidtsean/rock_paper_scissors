@@ -1,17 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import {Icon} from "semantic-ui-react";
-import {Wrap, Scissors, Paper, Rock} from "../styles/SharedStyles";
+import {Wrap, Scissors, Paper, Rock } from "../styles/SharedStyles";
 
 const Play = ({ setMyChoice }) => {
   const setChoice = (e) => {
     setMyChoice(e.target.dataset.id);
   };
+  const Rocks = require('../images/Rock.png');
 
   return (
     <Wrap  className="play">
       <Paper>  
         <Link to="/game">
+         <img src={Rocks} />
           <Icon 
             size='massive'
             name='hand paper outline' 

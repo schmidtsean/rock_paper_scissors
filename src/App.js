@@ -4,7 +4,7 @@ import Play from "./components/Play";
 import Game from "./components/Game";
 import { Switch, Route } from "react-router-dom";
 
-function App() {
+const App =() => {
   const [myChoice, setMyChoice] = useState("");
   const [score, setScore] = useState(0);
 
