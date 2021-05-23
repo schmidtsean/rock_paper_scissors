@@ -1,0 +1,57 @@
+.play{
+
+  width: 100%;
+
+  position: relative;
+  margin-top: 3.125rem;
+
+  display: flex;
+  flex-direction: column;
+
+
+  .items{
+      display: flex;
+      justify-content: center;
+
+      .icon{
+        height: 150px;
+        width: 150px;
+        border-radius: 25%;
+        border-color: transparent;
+        border: 10px solid;
+        background-size: 50%;
+
+          &--paper{
+              @include icon($imageP,$paper-gradient);
+              transform: translateX(10.5rem);
+              
+              &:hover{
+              transform: translateX(10.5rem)  scale(1.1);
+
+              }
+
+          }
+          &--scissors{
+              @include icon($imageS,$scissors-gradient);
+              transform: translateX(0rem) translateY(112%);
+
+              &:hover{
+                  transform: translateX(0rem) translateY(112%) scale(1.1);
+
+
+              }
+          }
+          &--rock{
+              @include icon($imageR,$rock-gradient);
+              transform: translateX(-10.5rem) translateY(225%) ;
+          
+
+              &:hover{
+                  transform: translateX(-10.5rem) translateY(225%) scale(1.1);
+
+              }
+          
+          }
+      }
+  }
+}

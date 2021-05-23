@@ -1,45 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {Icon} from "semantic-ui-react";
-import {Wrap, Scissors, Paper, Rock } from "../styles/SharedStyles";
 
 const Play = ({ setMyChoice }) => {
   const setChoice = (e) => {
     setMyChoice(e.target.dataset.id);
   };
-  const Rocks = require('../images/Rock.png');
 
   return (
-    <Wrap  className="play">
-      <Paper>  
+    <div className="play">
+      <div className="items">
         <Link to="/game">
-         <img src={Rocks} />
-          <Icon 
-            size='massive'
-            name='hand paper outline' 
+          <div
+            data-id="paper"
             onClick={setChoice}
-            data-id='paper' />
+            className="icon icon--paper"
+          ></div>
         </Link>
-      </Paper>
-      <Scissors>
         <Link to="/game">
-          <Icon 
-            size='massive'
-            name='hand scissors outline'
+          <div
+            data-id="scissors"
             onClick={setChoice}
-            data-id='scissors' />
+            className="icon icon--scissors"
+          ></div>
         </Link>
-      </Scissors>
-      <Rock>
         <Link to="/game">
-          <Icon 
-            size='massive'
-            name='hand rock outline'
+          <div
+            data-id="rock"
             onClick={setChoice}
-            data-id='rock' />
+            className="icon icon--rock"
+          ></div>
         </Link>
-      </Rock> 
-    </Wrap>
+      </div>
+    </div>
   );
 };
 
