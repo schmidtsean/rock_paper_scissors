@@ -7,12 +7,13 @@
   &__you{
       display: flex;
       flex-direction: column;
-      margin-right: 2.5rem;
+      margin: center;
+      margin-bottom: 25rem;
 .text{
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 300;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
       .icon{
           height: 150px;
@@ -53,10 +54,10 @@
   &__play{
       display: flex;
       flex-direction: column;
-      margin: 0 2rem;
+      margin: center;
       .text{
           text-transform: uppercase;
-          font-size: 3rem;
+          font-size: 2rem;
           font-weight: 700;
           margin-bottom: 10px;
       }
@@ -66,7 +67,7 @@
           text-transform: uppercase;
           padding: 10px 20px;
           border-radius: 5px;
-          font-size: 1rem;
+          font-size: .7rem;
 
           &:hover{
               color:black;
@@ -77,12 +78,13 @@
   &__house{
       display: flex;
       flex-direction: column;
-      margin-left: 2.5rem;
+      margin: center;
+      margin-top: 20rem;
 .text{
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 300;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
       .icon{
           height: 150px;
