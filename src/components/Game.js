@@ -96,7 +96,7 @@ const Game = ({ score, myChoice, setScore }) => {
             }`}
           ></div>
         ) : (
-          <div className="counter">{counter}</div>
+          <div className="counter">Thinking...</div>
         )}
       </div>
     </div>
