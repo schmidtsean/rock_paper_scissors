@@ -1,7 +1,9 @@
 import React from "react";
+import {Top} from "../styles/SharedStyles";
 
 const Header = ({ score }) => {
   return (
+    <>
     <div className="header">
       <div className="text">
         <span>Rock</span>
@@ -12,7 +14,10 @@ const Header = ({ score }) => {
         <span>Score</span>
         <div className="score-box__score">{score}</div>
       </div>
-    </div>
+      </div>
+        <Top>CHOOSE YOUR HAND</Top>
+    </>
+    
   );
 };
 
